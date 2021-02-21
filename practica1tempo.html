@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Practica 1</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+      <style>
+            #mapa {
+                  width: 100%;
+                  height: 500px;
+            }
+      </style>
+</head>
+<body>
+      <div class="container-fluid">
+            <div class="container">
+            <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="https://logos-marcas.com/wp-content/uploads/2020/11/PlayStation-Logo.png" alt="" width="60" height="34" class="d-inline-block align-top">
+            PlayStation
+        </a>
+      </div>
+      </nav>
+      </div>
+      </div>
+            <div id="carouselExampleControls" data-aos="fade-right" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="https://images8.alphacoders.com/710/710329.jpg" class="d-block w-100" alt="...">
+                        </div>                             
+                  </div>                       
+            </div>
+            <br>
+
+      <div class="container-fluid">
+            <div class="container">
+                  <div class="row">
+                        <div class="col-12">
+                              <h1>Play Has No Limits</h1>
+                              <h2>Vive una nueva generación de juegos increíbles de PlayStation.</h2>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="container-fluid bg-light py-5">
+            <div class="container">
+                  <div class="row">
+                        <div class="col-12 col-md-4">
+                              <a name="servicios"></a>
+                              <img src="https://images7.alphacoders.com/108/1082482.jpg" alt="Imagen1" class="w-100 rounded shadow">
+                              <h2 class="p-3">Spiderman: Miles Morales</h2>
+                              <p>Sigue con la historia del título original de PlayStation 4 con nuevos contenidos protagonizados por Miles Morales. En la última aventura del universo de Spider-Man de Marvel, el adolescente Miles Morales se adapta a su nuevo barrio al tiempo que sigue los pasos de Peter Parker, su mentor, y se convierte en un nuevo Spider-Man. Pero cuando una feroz lucha de poderes amenaza con destruir su nuevo hogar, el aspirante a héroe se da cuenta de que un gran poder debe conllevar una gran responsabilidad. Para salvar la Nueva York de Marvel, Miles debe tomar el relevo de Spider-Man y estar a la altura.</p>
+                        </div>
+                        <div class="col-12 col-md-4">
+                              <img src="https://images5.alphacoders.com/112/1126063.jpg" alt="Imagen2" class="w-100 rounded shadow">
+                              <h2 class="p-3">Resident Evil Village</h2>
+                              <p>Se sitúa unos años más tarde de los terroríficos acontecimientos del laureado Resident Evil 7: Biohazard, esta nueva historia empieza con Ethan Winters viviendo en paz en un nuevo lugar, libre de las pesadillas del pasado. Pero, en el mismo momento en que empieza a construir su nueva vida, la tragedia se cierne de nuevo sobre el. Cuando su casa se ve atacada por unos individuos, Ethan debe adentrarse en los infiernos una vez más, esta vez para recuperar a su hija secuestrada. Para lograrlo deberá viajar por un pueblo, un lugar donde ocurren extraños sucesos, donde encontrara seres y criaturas extrañas, viéndose también las caras con un viejo conocido del incidente de Dulvey, Chris.</p>
+                        </div>
+                        <div class="col-12 col-md-4">
+                              <img src="https://images2.alphacoders.com/108/1081790.png" alt="Imagen3" class="w-100 rounded shadow">
+                              <h2 class="p-3">Ratchet&Clank: Rift Apart</h2>
+                              <p>Un malvado emperador robótico está decidido a conquistar mundos interdimensionales, y tiene la mira puesta en la dimensión de Ratchet y Clank. Tendrás que desempolvar el arsenal alucinante de esta pareja dinámica y poner fin a la amenaza de un colapso dimensional.</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="container-fluid py-5">
+            <div class="container">
+                  <div class="row">
+                        <div class="col-12">
+                              <a name="mapadeubicacion"></a>
+                              <h2 class="text-center">MAPA CHIDO</h2>
+                              <div id="mapa"></div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="container-fluid bg-dark py-5">
+            <div class="container">
+                  <div class="row">
+                        <div class="col-12">
+                              <h3 class="text-white">SONY</h3>
+                              <p class="text-white">PlayStation es una marca registrada de SONY Corporation</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+
+
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+      <!-- Google Maps -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv-m46ebIV9fqkE2fIBGeWunmGmBm2R24&callback=iniciaMapa" async defer></script>
+
+      <!-- AOS -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <script>
+
+            AOS.init();
+
+            function iniciaMapa() {
+                  var coordenadas = {
+                        lat : 21.152639, lng : -101.711598
+                  }
+
+                  var map = new google.maps.Map(document.getElementById('mapa'),
+                        {
+                              center : coordenadas,
+                              zoom : 15 
+                        }
+                  ); 
+            }
+      </script>
+</body>
+</html>
